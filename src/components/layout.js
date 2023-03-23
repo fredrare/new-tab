@@ -5,46 +5,46 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
+import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  const background = (
+    <StaticImage
+      className="absolute inset-0 -z-50"
+      src="../images/macindows.png"
+      loading="eager"
+      quality={95}
+      formats={["auto", "webp", "avif"]}
+      alt="background"
+    />
+  )
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
+    <div className="flex flex-col w-full min-h-screen items-center text-stone-800 relative">
+      {background}
+      <main className="grow flex items-center justify-center">{children}</main>
+      <footer className="w-full p-2 flex justify-center gap-1">
+        Built by
+        <a
+          href="http://fredrare.com/"
+          rel="noreferrer"
+          target="_blank"
+          className="underline"
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+          Fredrare
+        </a>
+        - Inspired by
+        <a
+          href="http://www.zamax.design/"
+          rel="noreferrer"
+          target="_blank"
+          className="underline"
+        >
+          Zamax
+        </a>
+      </footer>
+    </div>
   )
 }
 
