@@ -11,6 +11,7 @@ const Starter = () => {
           onSubmit={() => console.log("hi")}
         >
           <input
+            autoFocus
             name="q"
             className="w-full border-4 border-stone-800 rounded-lg py-2 px-4 placeholder:text-stone-400 placeholder:font-japanese placeholder:font-normal font-semibold"
             placeholder="何が欲しいの？"

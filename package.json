@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "fredrare-new-tab",
+  "private": false,
+  "description": "Use this page to open an aesthetic new tab and surf the internet.",
+  "version": "0.1.1",
+  "author": "fredrare <franco@tsubakilabs.com>",
   "dependencies": {
     "gatsby": "^5.7.0",
     "gatsby-plugin-image": "^3.7.0",

@@ -1,13 +1,6 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 
-function Seo({ description, title, author, children }) {
+function Seo({ description, title, author, url, thumbnail, icon, children }) {
   return (
     <>
       <title>{title}</title>
@@ -15,10 +8,24 @@ function Seo({ description, title, author, children }) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={author} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={thumbnail} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" property="twitter:card" content="summary" />
+      <meta
+        name="twitter:creator"
+        property="twitter:creator"
+        content={author}
+      />
+      <meta name="twitter:title" property="twitter:title" content={title} />
+      <meta
+        name="twitter:description"
+        property="twitter:description"
+        content={description}
+      />
+      <meta propnameerty="twitter:url" property="twitter:url" content={url} />
+      <meta property="twitter:image" name="twitter:image" content={thumbnail} />
+      <link rel="icon" href={icon} />
       {children}
     </>
   )
