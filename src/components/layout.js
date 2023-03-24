@@ -10,14 +10,16 @@ import * as React from "react"
 
 const Layout = ({ children }) => {
   const background = (
-    <StaticImage
-      className="absolute inset-0 -z-50"
-      src="../images/macindows.png"
-      loading="eager"
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="background"
-    />
+    <div className="absolute inset-0 -z-50">
+      <StaticImage
+        className="w-full h-full object-cover"
+        src="../images/macindows.png"
+        loading="eager"
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="background"
+      />
+    </div>
   )
 
   return (
