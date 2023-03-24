@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         src="../images/macindows.webp"
         loading="lazy"
         quality={95}
-        formats={["auto", "webp", "avif"]}
+        formats={["webp"]}
         alt="background"
         placeholder="blurred"
       />
