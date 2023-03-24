@@ -30,10 +30,10 @@ const Layout = ({ children }) => {
       <footer className="w-full p-2 flex justify-center gap-1">
         Built by
         <a
-          href="http://fredrare.com/"
+          href="https://fredrare.com/"
           rel="noreferrer"
           target="_blank"
-          className="underline"
+          className="hover:underline focus-visible:underline"
         >
           Fredrare
         </a>
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
           href="http://www.zamax.design/"
           rel="noreferrer"
           target="_blank"
-          className="underline"
+          className="hover:underline focus-visible:underline"
         >
           Zamax
         </a>

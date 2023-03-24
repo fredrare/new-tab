@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "./button"
 import Frame from "./frame"
 
 const Starter = () => {
@@ -13,12 +14,10 @@ const Starter = () => {
           <input
             autoFocus
             name="q"
-            className="w-full border-4 border-stone-800 rounded-lg py-2 px-4 placeholder:text-stone-400 placeholder:font-japanese placeholder:font-normal font-semibold"
+            className="w-full border-4 border-stone-800 rounded-lg py-2 px-4 placeholder:text-stone-400 placeholder:font-japanese placeholder:font-normal font-semibold outline-none"
             placeholder="何が欲しいの？"
           />
-          <button className="w-max border-4 border-stone-800 rounded-lg px-4 py-2">
-            Get lucky!
-          </button>
+          <Button>Get lucky!</Button>
         </form>
       </Frame>
     </div>
